@@ -1,9 +1,0 @@
-
-%% conclusions
-%% future work (wetting and drying if its not included already, full 3D models instead of Boussinesq models)
-
-\section{Conclusions}
-We demonstrated the efficiency of GPU accelerated discontinuous Galerkin method for real world tsunami simulations. The performance results indicate that faster than real-time tsunami simulations are possible even with high order discretizations on workstation.  The reasons contributing to such performance are: 1) Tailoring the implementations specifically for the discontinuous Galerkin discretization of shallow water equations gives significantly increased performance compared to a more general library-based approach,  2) An order of magnitude performance improvement is achieved by taking advantage of GPUs. This required exposing fine-grain parallelism in the algorithms. 3) Multi-rate time stepping method improves the time stepping performance by allowing the elements to be integrated with local allowable time step sizes. The speed up with the multi-rate scheme is ten folds for global tsunami simulation. 4) Using single precision arithmetic gives up to  two fold speed up compared to double precision arithmetic on GPUs since the algorithms are memory bound.  
-
-\section*{Acknowledgements}
-The authors gratefully acknowledge travel grants from Pan-American Advanced Studies Institute,  grant from DOE and ANL (ANL Subcontract No. 1F-32301 on DOE grant No. DE-AC02-06CH11357),  grant from ONR (Award No. N00014-13-1-0873),  fellowships from Ken Kennedy Institute of technology at Rice University and support from Shell (Shell Agreement No. PT22584), NVIDIA, and AMD.  Authors also thank Dr. Axel Modave, Dr. Jesse Chan, and Dr. Cynthia Wood for fruitful discussions in preparation of this manuscript.

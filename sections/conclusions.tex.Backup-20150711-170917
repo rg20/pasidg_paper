@@ -1,9 +1,0 @@
-
-%% conclusions
-%% future work (wetting and drying if its not included already, full 3D models instead of Boussinesq models)
-
-\section{Conclusions}
-We demonstrated that faster than real-time simulations can be achieved with high order discontinuous Galerkin methods that are computationally demanding. This is due to the efficient multi-rate time integration technique and the carefully tuned algorithms on modern many-core hardware architectures such as GPUs.   We validated the numerical model and implementation with  2004 Indian Ocean tsunami data. We compared the overall runtime performance of CUDA, OpenCL, OpenMP threading models through OCCA framework.
-
-\section*{Acknowledgements}
-The authors gratefully acknowledge travel grants from Pan-American Advanced Studies Institute,  grant from DOE and ANL (ANL Subcontract No. 1F-32301 on DOE grant No. DE-AC02-06CH11357),  grant from ONR (Award No. N00014-13-1-0873),  fellowships from Ken Kennedy Institute of technology at Rice University and support from Shell (Shell Agreement No. PT22584), NVIDIA, and AMD.  Authors also thank Dr. Axel Modave, Dr. Jesse Chan, and Dr. Cynthia Wood for fruitful discussions in preparation of this manuscript.
