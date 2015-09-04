@@ -1,0 +1,6 @@
+pdflatex pasidg
+bibtex pasidg
+bibtex pasidg
+pdflatex pasidg
+pdflatex pasidg
+rm pasidg.aux pasidg.out pasidg.log pasidg.bbl pasidg.blg

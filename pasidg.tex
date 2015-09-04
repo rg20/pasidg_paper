@@ -1,0 +1,86 @@
+%
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{verbatim}
+%% \usepackage{fancyhdr}
+\usepackage{graphicx}
+%% %\usepackage[leftmargin = 1in, rightmargin = 0.75in]{geometry}
+%\usepackage{geometry}
+%% \usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{listings}
+
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=c++,
+  morekeywords={occaKernel, __kernel, __global, occaConst, occaPointer, occaVariable, occaInnerId0, occaOuterId0, occaGlobalId0, occaOuterFor0, occaInnerFor0, occaKernelInfoArg, occaDims, occa, occa::device, occa::kernel, occa::memory, setup, malloc, setWorkingDims, buildKernelFromSource, free, copyFrom, copyTo},
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=true,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{orange},
+  breaklines=true,
+  breakatwhitespace=true,
+  basicstyle=\small\normalfont\sffamily,    % the size of the fonts that are used for the code
+  stepnumber=1,                % the step between two line-numbers. If it is 1 each line will be numbered
+  numbersep=10pt,                         % how far the line-numbers are from the code
+  tabsize=2,                              % tab size in blank spaces
+  extendedchars=true,                     %
+  breaklines=true,                        % sets automatic line breaking
+  captionpos=t,                           % sets the caption-position to top
+  mathescape=true,
+  stringstyle=\color{white}\ttfamily, % Farbe der String
+  showspaces=false,           % Leerzeichen anzeigen ?
+  showtabs=false,             % Tabs anzeigen ?
+  xleftmargin=17pt,
+  framexleftmargin=17pt,
+  framexrightmargin=17pt,
+  framexbottommargin=5pt,
+  framextopmargin=5pt,
+  showstringspaces=false
+}
+
+\captionsetup[lstlisting]{format=listing,singlelinecheck=false, margin=0pt, font={sf}}
+
+\newcommand{\pa}[2]{\frac{\partial #1}{\partial #2}}
+\def\usFootnote{Department of Computational and Applied Mathematics, Rice University, 6100 Main Street - MS 134, Houston, TX 77005, USA}
+\def\email{Corresponding author. \textit{Email addresses:
+Rajesh.Gandham@rice.edu, timwar@rice.edu, fxgirald@nps.edu} }
+\def\fxgFootnote{Department of Applied Mathematics, Naval Postgraduate School, 1 University Circle, Monterey, CA 93943}
+
+\title{High performance discontinuous Galerkin methods for faster than real time tsunami simulations}
+\author{R.~Gandham \footnote{\email} \textsuperscript{,}\footnote{\usFootnote},\
+  T.~Warburton\footnotemark[\value{footnote}],\
+  F.~X.~Giraldo\footnote{\fxgFootnote}}
+
+\begin{document}
+
+\maketitle
+\input{./sections/abstract}
+
+\input{./sections/intro}
+\input{./sections/methods}
+\input{./sections/datasets}
+\input{./sections/results}
+\input{./sections/conclusions}
+
+\bibliographystyle{siam}
+\bibliography{refs}
+\end{document}

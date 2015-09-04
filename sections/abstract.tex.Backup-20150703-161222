@@ -1,0 +1,4 @@
+%% abstract
+\begin{abstract}
+We describe the application of the high performance, high order discontinuous Galerkin methods for faster than real-time simulations of tsunami wave propagation. We adapt the methods described in \cite{gandham2014swe} and validate them with the tidal gauge recordings of 2004 Indian Ocean tsunami event. Our implementations use OCCA \cite{medina2014occa, occa2}, a portable and extensive multi-threading library.  OCCA\ library alleviates the need to completely re-design the solver to keep up with constantly evolving parallel programming models and hardware architectures. We present performance results for the real world tsunami simulations leveraging multiple different multi-threading APIs on GPU and CPU targets. 
+\end{abstract}
