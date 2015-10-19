@@ -106,30 +106,41 @@ Reflecting boundary conditions are imposed on the coastal boundary. However, the
 %here, $x$ is the distance from the outflow boundary and $\delta$ is the thickness of the absorbing layer. $\delta$ has to be sufficiently large in order to get significant damping of the outgoing waves in the absorbing layer. 
 
 \subsection{Multi-rate time stepping}
-At the beginning of the simulation, the elements are grouped into levels for the multi-rate time scheme, based on the elemental CFL condition. Fig (\ref{fig:indian_ocean_levels}), shows the distribution of the multi-rate levels for this simulation. Table (\ref{tab:pasidgLevels}), shows the percentage of elements grouped into each level.  From the figure it is clear that the elements near the shore are grouped into levels $3$ and $4$, that are the finest levels in the multi-rate scheme, whereas the elements in deep ocean are grouped in to levels $1$ and $2$, that are the coarsest levels. Only $2\%$ of the overall elements fall in to the finest level, resulting in $98\%$ of the elements requiring at most half of the computations when compared to a single rate scheme.
+At the beginning of the simulation, the elements are grouped into levels for the multi-rate time scheme, based on the elemental CFL condition. Fig (\ref{fig:indian_ocean_levels}, \ref{fig:world_ocean_levels}), show the distribution of the multi-rate levels for these simulations. 
 
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{crrrrr}
-\hline
-Level & \# elements & \% of elements & work per elem & \% of overall work\\ \hline
-1 &  9960 &  7.63 & 1 & 2.60\\
-2 & 60123 &  46.09 & 2 & 31.37\\
-3 & 57441 & 44.04 & 4 & 59.94\\
-4 &  2920 &  2.24 & 8 & 6.09\\\hline
-\end{tabular}
-\caption{\emph{Distribution of time stepping levels in multi-rate time integration
-scheme.}}
-\label{tab:pasidgLevels}
-\end{center}
-\end{table}
+%Table (\ref{tab:pasidgLevels}), shows the percentage of elements grouped into each level.  From the figure it is clear that the elements near the shore are grouped into levels $3$ and $4$, that are the finest levels in the multi-rate scheme, whereas the elements in deep ocean are grouped in to levels $1$ and $2$, that are the coarsest levels. Only $2\%$ of the overall elements fall in to the finest level, resulting in $98\%$ of the elements requiring at most half of the computations when compared to a single rate scheme.
+
+%\begin{table}[h!]
+%\begin{center}
+%\begin{tabular}{crrrrr}
+%\hline
+%Level & \# elements & \% of elements & work per elem & \% of overall work\\ \hline
+%1 &  9960 &  7.63 & 1 & 2.60\\
+%2 & 60123 &  46.09 & 2 & 31.37\\
+%3 & 57441 & 44.04 & 4 & 59.94\\
+%4 &  2920 &  2.24 & 8 & 6.09\\\hline
+%\end{tabular}
+%\caption{\emph{Distribution of time stepping levels in multi-rate time integration scheme.}}
+%\label{tab:pasidgLevels}
+%\end{center}
+%\end{table}
+
+
 \begin{figure}[h!]
 \begin{center}
-%\centering
 \includegraphics[trim=6cm 19.65cm 4.5cm 3.1cm,clip=true,width=0.5\linewidth]{./figures/IndianOceanLevels.pdf}
-\caption{\emph{Distribution of  multi-rate levels for time stepping with
-four levels.}}
+\caption{\emph{Distribution of  multi-rate levels for time stepping with four levels.}}
 \label{fig:indian_ocean_levels}
 \end{center}
 \end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[trim=6cm 2cm 6cm 4cm,clip=true,width=0.5\linewidth]{./figures/GlobalOceanLevels.pdf}
+\caption{\emph{Distribution of  multi-rate levels for time stepping with 17 levels.}}
+\label{fig:world_ocean_levels}
+\end{center}
+\end{figure}
+
+
 
